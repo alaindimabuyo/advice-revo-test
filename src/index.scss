@@ -17,6 +17,9 @@ body {
   margin: 0;
 }
 
+a {
+  all: unset;
+}
 p,
 h1 {
   margin: 0;
@@ -32,6 +35,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0;
+
 }
 
 .login-image {
@@ -46,6 +50,9 @@ h1 {
   justify-content: center;
   align-items: center;
 
+  & div{
+    width: 20rem;
+  }
   .form-input{
     display: flex;
     flex-direction: column;
@@ -54,7 +61,7 @@ h1 {
     label {
       font-weight: bold;
       font-size: 15px;
-      color:darkgray;
+      color:rgb(31, 31, 31);
       cursor:pointer;
     }
 
@@ -93,6 +100,7 @@ h1 {
   font-size: 10px;
   font-weight: bold;
   margin-bottom: 2rem;
+  color:rgb(31, 31, 31);
   &:hover{
     text-decoration: underline;
   }
@@ -101,11 +109,13 @@ h1 {
 input[type=submit] {
 	padding:15px 50px;
 	width:100%;
-	background:#1abc9c;
+	background:#1a1a1a;
 	border:none;
 	color:white;
+  font-weight: bold;
 	cursor:pointer;
   margin-bottom: 3rem;
+  border-radius: 10px;
 	display:inline-block;
 	clear:right;
 	-webkit-transition:0.2s ease all;

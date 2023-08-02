@@ -13,9 +13,9 @@ export const authenticationApi = baseAPI.injectEndpoints({
       },
     }),
     loginUser: build.mutation<Auth, Partial<Auth>>({
-      query(body) {
+      query({id, body}) {
         return {
-          url: `/auth/users/login`,
+          url: `/auth/users/login?appId${id}&redirectCode=true`,
           method: 'POST',
           body,
         }
