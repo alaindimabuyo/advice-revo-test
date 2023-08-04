@@ -1,6 +1,13 @@
 export interface Auth {
-  id: "",
-  body: null,
+    id: "",
+    body: null,
     name: "",
-    data: ""
+    data: "",
+    type: ""
   }
+
+
+export interface Login {
+    username: string
+    password: string
+}

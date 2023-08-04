@@ -1,5 +1,5 @@
 import baseAPI from '../baseApi';
-import type { Auth } from './types'
+import { Auth, Login} from './types'
 
 export const authenticationApi = baseAPI.injectEndpoints({
   endpoints: build => ({
@@ -12,12 +12,12 @@ export const authenticationApi = baseAPI.injectEndpoints({
         }
       },
     }),
-    loginUser: build.mutation<Auth, Partial<Auth>>({
-      query({id, body}) {
+    loginUser: build.mutation<Login, Partial<Login>>({
+      query(body) {
         return {
-          url: `/auth/users/login?appId${id}&redirectCode=true`,
+          url: `/auth/users/login?appId=f655b265-91ac-4d2b-a742-b84275c5dfbb&redirectCode=false`,
           method: 'POST',
-          body,
+          body 
         }
       },
     }),
